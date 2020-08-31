@@ -12,7 +12,7 @@
 	<buildtool_depend>cmake</buildtool_depend>
 
 	<depend>ct_rbd</depend>
-	<exec_depend>catkin</exec_depend>	<!-- ROS compatibility-->
+	<exec_depend>ament_cmake</exec_depend>	<!-- ROS compatibility-->
 
 	<export>		<!-- Specify that this is not a ROS package-->
 		<build_type>cmake</build_type>
