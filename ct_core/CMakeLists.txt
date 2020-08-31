@@ -10,8 +10,8 @@ project(ct_core VERSION 3.0.2 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -pthread -Wall -Wfatal-errors")
-set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -pthread -Wall -Wfatal-errors")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wfatal-errors")
+set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -Wall -Wfatal-errors")
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 
@@ -20,6 +20,7 @@ set(ct_core_LIBS "")
 ## find and include required dependencies
 find_package(Eigen3 REQUIRED)
 find_package(Boost COMPONENTS REQUIRED)
+find_package(Threads REQUIRED)
 
 ## find and include optional dependencies
 find_package(LLVM QUIET)
